@@ -8,6 +8,7 @@ FROM continuumio/miniconda3
 #########################################
 
 LABEL maintainer vsochat@stanford.edu
+RUN pip install openbases
 ADD generate.py /
 ENV PATH /usr/local/bin:$PATH
 ENTRYPOINT ["python", "/generate.py"]
